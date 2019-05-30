@@ -99,7 +99,6 @@ const crypto = require ('crypto');
             let emailString = 'Ola, seu token de restauração de senha é: <strong>{0}</strong>.'
             emailService.send(req.body.email, 'Restauração de senha', emailString.replace('{0}', token));
 
-            console.log(token, now);
             res.status(201).send({message: 'E-mail enviado'});
         }
         catch (e) {
