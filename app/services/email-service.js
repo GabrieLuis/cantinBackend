@@ -1,11 +1,11 @@
 'use strict'
 
-const sendgridKey = require ('sendgrid')(process.env.sendgridKey || config.sendgridKey);
+const sendgridKey = require ('sendgrid')(process.env.sendgridKey);
 
     exports.send = async (to, subject, body) => {
         sendgridKey.send({
             to: to,
-            from: 'gabriellsantana13@gmail.com',
+            from: '',
             subject: subject,
             html: body
         });
