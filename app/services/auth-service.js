@@ -3,7 +3,7 @@
 const jwt = require ('jsonwebtoken');
 
     exports.gerarToken = async (data) => {
-        return jwt.sign(data, process.env.api, {expiresIn: '1d'});
+        return jwt.sign(data, process.env.api);
     }
 
     exports.decodificarToken = async (token) => {
